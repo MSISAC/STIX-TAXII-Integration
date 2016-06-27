@@ -42,7 +42,7 @@ Import /path/to/file/ms-isac.rules
 On the first run, this script will convert all observables from the AttackingIPs feed in the last year to Snort rules.
 Each run after the initial will convert observables from the last 7 days.
 
-This is intended to be added to your Snort system as a cron job to be ran each week in order to add the newest malicious IP addresses and domains to your Snort rule set.
+This is intended to be added to your Snort system as a cron job to be run each week in order to add the newest malicious IP addresses and domains to your Snort rule set.
 
 This can be done by adding the following to your crontab:
 $ crontab -e
