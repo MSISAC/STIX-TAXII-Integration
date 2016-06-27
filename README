@@ -2,7 +2,7 @@ soltra2snort
 
 About
 
-soltra2snort is a simple python script that converts the MS-ISAC Soltra Edge AttakingIPs feed into Snort rules on your local Snort instance.
+soltra2snort is a simple python script that converts the MS-ISAC Soltra Edge AttackingIPs feed into Snort rules on your local Snort instance.
 
 The AttackingIPs feed contains observables in the form of IP addresses and domains that have been detected to be malicious by the MS-ISAC SOC.
 
@@ -40,7 +40,7 @@ Add this line to your snort.conf file:
 Import /path/to/file/ms-isac.rules
 
 On the first run, this script will convert all observables from the AttackingIPs feed in the last year to Snort rules.
-Each run after the initial will covert observables from the last 7 days.
+Each run after the initial will convert observables from the last 7 days.
 
 This is intended to be added to your Snort system as a cron job to be ran each week in order to add the newest malicious IP addresses and domains to your Snort rule set.
 
