@@ -84,9 +84,9 @@ def pollData(taxii_url,user_pwd,first):
 	# We want to only grab the data from last week to today
 	# Get todays date/time
 	today = datetime.strftime(datetime.utcnow(),'%Y-%m-%dT%H:%M:%SZ')
-	# Subtract 7 or 365 days from todays date/time depending on if this is the first run or not
+	# Subtract 7 or 30 days from todays date/time depending on if this is the first run or not
 	if first is True:
-		past = datetime.strftime(datetime.utcnow() - timedelta(days=365), '%Y-%m-%dT%H:%M:%SZ')
+		past = datetime.strftime(datetime.utcnow() - timedelta(days=30), '%Y-%m-%dT%H:%M:%SZ')
 	else:
 		past = datetime.strftime(datetime.utcnow() - timedelta(days=7), '%Y-%m-%dT%H:%M:%SZ')
 	start_end = """
