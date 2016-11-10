@@ -3,6 +3,6 @@ The STIX-TAXII-Integration scripts are designed to automatically convert the wee
 
 Further usage documentation is available for your firewal or IDS/IPS solution:<br />
  [Snort IDS](https://github.com/MSISAC/STIX-TAXII-Integration/blob/master/README-soltra2snort)<br />
- [Sourcefire IDS](https://github.com/MSISAC/STIX-TAXII-Integration/blob/master/README-defensecenter-upload)<br />
+ [Sourcefire IDS](https://github.com/MSISAC/STIX-TAXII-Integration/blob/master/README-defensecenter_upload)<br />
  [Cisco FW](https://github.com/MSISAC/STIX-TAXII-Integration/blob/master/README-soltra2ciscofw)<br />
  [Juniper FW](https://github.com/MSISAC/STIX-TAXII-Integration/blob/master/README-soltra2juniperfw)<br />
