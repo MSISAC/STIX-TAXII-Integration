@@ -11,11 +11,11 @@ Prerequisites
 
 About
 
-defensecenter_upload.py is a python script that automatically uploads and applies snort rules to your defense center and commits the policy to sourcefire devices. This script is intended to be used in conjuction with soltra2snort.py which converts MS-ISAC Soltra Edge AttackingIPs feed into Snort rules on your local linux machine. The defensecenter_upload script then uploads those rules to your remote Defense Center.
+defensecenter_upload.py is a python script that automatically uploads and applies snort rules to your defense center and commits the policy to sourcefire devices. This script is intended to be used in conjuction with api2snort.py which converts MS-ISAC AttackingIPs into Snort rules on your local linux machine. The defensecenter_upload script then uploads those rules to your remote Defense Center.
 
 The AttackingIPs feed contains observables in the form of IP addresses and domains that have been detected to be malicious by the MS-ISAC SOC.
 
-Authentication is required to access the feeds from the MS-ISAC Soltra Edge server.
+Authentication is required to access the attacking IP data from the MS-ISAC API server.
 If you wish to gain access to the feeds, please email a request to soc@msisac.org.
 
 Usage
@@ -59,5 +59,5 @@ This is intended to be added to your a system as a cron job to be run each week 
 This can be done by adding the following to your crontab:
 $ crontab -e
 
-append this line to run soltra2snort every Tuesday at midnight:
+append this line to run api2snort every Tuesday at midnight:
 0 0 * * 2 python /path/to/defensecenter_upload.py
