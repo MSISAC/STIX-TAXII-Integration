@@ -32,4 +32,4 @@ class api():
 			return info_list
 
 		except requests.exceptions.Timeout:
-			print "ERROR: TIMEOUT! Check If You Are Whitelisted with the MS-ISAC. Please Contact vmp.dl|at|cisecurity.org"
+			print "ERROR: TIMEOUT! Check If You Are Whitelisted with the MS-ISAC. Please Contact indicator.sharing|at|cisecurity.org"
