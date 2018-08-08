@@ -66,7 +66,7 @@ def verifyOutFile(outputLocation,outputFile):
 		exit()
 	output = outputLocation+outputFile
 	# Does output file exist
-	if os.path.isfile(output):
+	if os.path.isfile(output) and os.path.getsize(output) > 0:
 		f = open(output,'r')
 		oldAddrs = f.readlines()
 		# Get the last ip/domain
@@ -103,7 +103,7 @@ def api(output, first):
 			line_value = line['ip']
 			msg = "MS-ISAC MALWARE IP"
 
-		sig = utils.genRule(line_value, msg, False)
+		sig = genRule(line_value, msg, False)
 		file.write(sig + "\r\n")
 	file.close()
 
