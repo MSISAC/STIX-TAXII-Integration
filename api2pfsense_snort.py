@@ -106,7 +106,7 @@ def api(output, first, lastSid):
 				line_value = line['ip']
 
 			msg = ""
-			if re.match( '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}', line_value ):
+			if re.match( '(?:[0-9]{1,3}\.){3}[0-9]{1,3}', line_value ):
 				sig = genSnort(line_value, msg, False, str(sid))
 				file.write(sig + "\n")
 				sid += 1
@@ -124,7 +124,7 @@ def api(output, first, lastSid):
 				line_value = line['ip']
 				msg = "MS-ISAC MALWARE IP"
 			
-			if re.match( '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}', line_value ):
+			if re.match( '(?:[0-9]{1,3}\.){3}[0-9]{1,3}', line_value ):
 				sig = genSnort(line_value, msg, False, str(sid))
 				file.write(sig + "\n")
 				sid += 1
